@@ -21,6 +21,7 @@ export interface Configuration {
    * not need this file.
    */
   manifestFilename?: string | boolean
+  cacheLocalDir: string
 }
 
 /** default configuration */
@@ -28,7 +29,8 @@ export const defaults: Omit<Required<Configuration>, 'uploadContent'> = {
   keepLocalFiles: false,
   keepSourcemaps: false,
   backupHTMLFiles: false,
-  manifestFilename: false
+  manifestFilename: false,
+  cacheLocalDir: ''
 }
 
 /** merge user configuration with defaults */
